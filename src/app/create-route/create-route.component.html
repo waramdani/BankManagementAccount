@@ -1,0 +1,62 @@
+
+    <h1>Create a new Customers</h1>
+    <form [formGroup]="bankmanagementForm" (ngSubmit)="submit()" class="flex flex-col w-full gap-6 mt-6">
+        <div class="flex flex-col gap-2">
+            <label for="firstname">FirstName*</label>
+            <input type="text" id="firstname" formControlName="firstname" class="border rounded-md shadow px-4 py-2">
+            <small class="text-red-500" *ngIf="getControl('firstname')?.hasError('required') && getControl('firstname')?.touched">
+                FirstName is required
+            </small>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label for="LastName">LastName*</label>
+            <input type="text" id="lastname" formControlName="lastname" class="border rounded-md shadow px-4 py-2">
+            <small class="text-red-500" *ngIf="getControl('lastname')?.hasError('required') && getControl('lastname')?.touched">
+                LastName is required
+            </small>
+            <small class="text-red-500" *ngIf="getControl('lastname')?.hasError('nameExists') && getControl('lastname')?.touched">
+                this LastName already exists
+            </small>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label for="description">Email *</label>
+            <input type="text" id="email" formControlName="email" class="border rounded-md shadow px-4 py-2">
+            <small class="text-red-500" *ngIf="getControl('email')?.hasError('required') && getControl('email')?.touched">
+                Email is required
+            </small>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label for="gender">Gender *</label>
+            <div>
+                <label>
+                    <input type="radio" name="email" value="male" formControlName="gender">
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" formControlName="gender">
+                    Female
+                </label>
+            </div>
+            <small class="text-red-500" *ngIf="getControl('gender')?.hasError('required') && getControl('gender')?.touched">
+                Gender is required
+            </small>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label for="description">Adresse *</label>
+            <textarea type="text" id="address" formControlName="address" class="border rounded-md shadow px-4 py-2"></textarea>
+            <small class="text-red-500" *ngIf="getControl('address')?.hasError('required') && getControl('address')?.touched">
+                Adresse is required
+            </small>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label for="description">balance *</label>
+            <input type="number" id="balance" formControlName="balance" class="border rounded-md shadow px-4 py-2">
+            <small class="text-red-500" *ngIf="getControl('balance')?.hasError('required') && getControl('balance')?.touched">
+                balance is required
+            </small>
+        </div>
+        <button type="submit"
+            class="border border-green-400 rounded-md shadow p-2 bg-green-400 hover:bg-green-500 text-green-900 w-1/3 ml-auto disabled:opacity-50"
+    
+            >Create</button>
+    </form>

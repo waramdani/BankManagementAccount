@@ -1,0 +1,34 @@
+{
+  "customers": [
+    {
+      "firstName": "ahmedmer",
+      "lastName": "mouawya",
+      "email": "gmailcom",
+      "gender": "wallid",
+      "address": "mmmmmm",
+      "image": "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat",
+      "types": [
+        {
+          "name": "Default",
+          "balance": 100
+        }
+      ],
+      "id": 1
+    },
+    {
+      "firstName": "Ahmed",
+      "lastName": "mimo",
+      "email": "mimo@gmail.com",
+      "gender": "male",
+      "address": "aaa",
+      "image": "https://avataaars.io/?avatarStyle=Transparent&skinColor=Pale",
+      "types": [
+        {
+          "name": "Default",
+          "balance": 50
+        }
+      ],
+      "id": 2
+    }
+  ]
+}
